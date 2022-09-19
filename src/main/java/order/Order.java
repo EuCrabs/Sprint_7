@@ -14,11 +14,11 @@ public class Order {
     private Integer rentTime;
     private String deliveryDate;
     private String comment;
-    private String[] color;
+    private List<String> color;
 
     public Order() {}
 
-    public Order(String firstName, String lastName, String address, String metroStation, String phone, Integer rentTime, String deliveryDate, String comment, String[] color) {
+    public Order(String firstName, String lastName, String address, String metroStation, String phone, Integer rentTime, String deliveryDate, String comment, List<String> color) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -30,7 +30,7 @@ public class Order {
         this.color = color;
     }
 
-    public static Order getRandomOrder(String[] color) {
+    public static Order getRandomOrder(List<String> color) {
         Random random = new Random();
         return new Order(
                 RandomStringUtils.randomAlphabetic(10),
@@ -109,11 +109,11 @@ public class Order {
         this.comment = comment;
     }
 
-    public String[] getColor() {
+    public List<String> getColor() {
         return color;
     }
 
-    public void setColor(String[] color) {
+    public void setColor(List<String> color) {
         this.color = color;
     }
 }

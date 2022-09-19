@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CourierTest" time="8.11" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="GetListOfOrdersTest" time="3.595" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,7 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="checkCantCreateTwoSimilarCouriers" classname="CourierTest" time="6.791"/>
-  <testcase name="checkCourierCanBeCreated" classname="CourierTest" time="0.842"/>
-  <testcase name="checkRequiredPasswordField" classname="CourierTest" time="0.278"/>
+  <testcase name="getListOfOrders" classname="GetListOfOrdersTest" time="3.595"/>
 </testsuite>

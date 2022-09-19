@@ -46,12 +46,13 @@ public class CourierTest {
     public void checkCantCreateTwoSimilarCouriers() {
 
         courierClient.create(courier);
-        String message = courierClient.create(courier)
-                .statusCode(409)
-                .extract().path("message");
         courierId = courierClient.login(CourierCredentials.from(courier))
                 .statusCode(200)
                 .extract().path("id");
+
+        String message = courierClient.create(courier)
+                .statusCode(409)
+                .extract().path("message");
 
         assertEquals("Этот логин уже используется. Попробуйте другой.", message);
     }
@@ -61,11 +62,11 @@ public class CourierTest {
     public void checkRequiredPasswordField() {
 
         courier.setPassword("");
+        courierId = 0;
+
         String message = courierClient.create(courier)
                 .statusCode(400)
                 .extract().path("message");
-
-        courierId = 0;
 
         assertEquals("Недостаточно данных для создания учетной записи", message);
     }
